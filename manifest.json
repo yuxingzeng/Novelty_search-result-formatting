@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "查新辅助(厦门市科学技术信息研究院)",
+    "version": "1.0",
+    "description": "按查新标准格式化检索结果",
+	"update_url": "http://update.google.com/intf.php?method=ExtUpdate.query",
+    "background": {
+       "scripts": [
+            "js/background.js"
+        ]
+    },
+    "icons": {
+        "24": "images/qbslogo_24.png",
+		"32": "images/qbslogo_32.png",
+		"48": "images/qbslogo_48.png",
+		"64": "images/qbslogo_64.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["js/content.js"]
+        }
+    ],
+    "permissions": [
+        "contextMenus",
+		"clipboardWrite",
+		"clipboardRead"
+    ]
+}
